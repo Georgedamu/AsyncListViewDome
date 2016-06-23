@@ -1,9 +1,11 @@
 package com.ten.george.asynclistviewdome;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -26,6 +28,13 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    public void onchange(View view){
+        Intent intent = new Intent();
+        intent.setClass(this,GradViewActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
